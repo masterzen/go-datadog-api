@@ -269,7 +269,7 @@ func TestWidgets(t *testing.T) {
 					ConditionalFormats: []datadog.ConditionalFormat{
 						{
 							Comparator: datadog.String(">"),
-							Value:      datadog.String("4"),
+							Value:      datadog.StrInt("4"),
 							Palette:    datadog.String("white_on_green"),
 						}},
 				}},

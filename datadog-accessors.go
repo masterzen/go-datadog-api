@@ -854,9 +854,16 @@ func (a *APIKey) SetName(v string) {
 // GetAggregation returns the Aggregation field if non-nil, zero value otherwise.
 func (a *ApmOrLogQueryCompute) GetAggregation() string {
 	if a == nil || a.Aggregation == nil {
-		return ""
 	}
 	return *a.Aggregation
+}
+
+// GetValue returns the Value field if non-nil, zero value otherwise.
+func (c *ConditionalFormat) GetValue() StrIntD {
+	if c == nil || c.Value == nil {
+		return ""
+	}
+	return c.Value
 }
 
 // GetAggregationOk returns a tuple with the Aggregation field if it's non-nil, zero value otherwise
@@ -866,6 +873,13 @@ func (a *ApmOrLogQueryCompute) GetAggregationOk() (string, bool) {
 		return "", false
 	}
 	return *a.Aggregation, true
+}
+
+func (c *ConditionalFormat) GetValueOk() (StrIntD, bool) {
+	if c == nil || c.Value == nil {
+		return "", false
+	}
+	return c.Value, true
 }
 
 // HasAggregation returns a boolean if a field has been set.
@@ -880,6 +894,11 @@ func (a *ApmOrLogQueryCompute) HasAggregation() bool {
 // SetAggregation allocates a new a.Aggregation and returns the pointer to it.
 func (a *ApmOrLogQueryCompute) SetAggregation(v string) {
 	a.Aggregation = &v
+}
+
+// SetValue allocates a new c.Value and returns the pointer to it.
+func (c *ConditionalFormat) SetValue(v StrIntD) {
+	c.Value = &v
 }
 
 // GetFacet returns the Facet field if non-nil, zero value otherwise.
