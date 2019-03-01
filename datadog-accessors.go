@@ -12105,7 +12105,7 @@ func (o *Options) SetTimeoutH(v int) {
 }
 
 // GetCount returns the Count field if non-nil, zero value otherwise.
-func (p *Params) GetCount() string {
+func (p *Params) GetCount() StrIntD {
 	if p == nil || p.Count == nil {
 		return ""
 	}
@@ -12114,7 +12114,7 @@ func (p *Params) GetCount() string {
 
 // GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
-func (p *Params) GetCountOk() (string, bool) {
+func (p *Params) GetCountOk() (StrIntD, bool) {
 	if p == nil || p.Count == nil {
 		return "", false
 	}
@@ -12131,7 +12131,7 @@ func (p *Params) HasCount() bool {
 }
 
 // SetCount allocates a new p.Count and returns the pointer to it.
-func (p *Params) SetCount(v string) {
+func (p *Params) SetCount(v StrIntD) {
 	p.Count = &v
 }
 
@@ -12167,7 +12167,7 @@ func (p *Params) SetSort(v string) {
 }
 
 // GetStart returns the Start field if non-nil, zero value otherwise.
-func (p *Params) GetStart() string {
+func (p *Params) GetStart() StrIntD {
 	if p == nil || p.Start == nil {
 		return ""
 	}
@@ -12176,7 +12176,7 @@ func (p *Params) GetStart() string {
 
 // GetStartOk returns a tuple with the Start field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
-func (p *Params) GetStartOk() (string, bool) {
+func (p *Params) GetStartOk() (StrIntD, bool) {
 	if p == nil || p.Start == nil {
 		return "", false
 	}
@@ -12193,7 +12193,7 @@ func (p *Params) HasStart() bool {
 }
 
 // SetStart allocates a new p.Start and returns the pointer to it.
-func (p *Params) SetStart(v string) {
+func (p *Params) SetStart(v StrIntD) {
 	p.Start = &v
 }
 
