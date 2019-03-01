@@ -18,8 +18,8 @@ type Screenboard struct {
 	Id                *int               `json:"id,omitempty"`
 	NewId             *string            `json:"new_id,omitempty"`
 	Title             *string            `json:"board_title,omitempty"`
-	Height            *int               `json:"height,omitempty"`
-	Width             *int               `json:"width,omitempty"`
+	Height            *StrIntD           `json:"height,omitempty"`
+	Width             *StrIntD           `json:"width,omitempty"`
 	Shared            *bool              `json:"shared,omitempty"`
 	TemplateVariables []TemplateVariable `json:"template_variables,omitempty"`
 	Widgets           []Widget           `json:"widgets"`

@@ -19831,6 +19831,14 @@ func (t *TimeseriesDefinition) GetTime() WidgetTime {
 	return *t.Time
 }
 
+// GetHeight returns the Height field if non-nil, zero value otherwise.
+func (s *Screenboard) GetHeight() StrIntD {
+	if s == nil || s.Height == nil {
+		return ""
+	}
+	return s.Height
+}
+
 // GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
 func (t *TimeseriesDefinition) GetTimeOk() (WidgetTime, bool) {
@@ -19838,6 +19846,13 @@ func (t *TimeseriesDefinition) GetTimeOk() (WidgetTime, bool) {
 		return WidgetTime{}, false
 	}
 	return *t.Time, true
+}
+
+func (s *Screenboard) GetHeightOk() (StrIntD, bool) {
+	if s == nil || s.Height == nil {
+		return "", false
+	}
+	return s.Height, true
 }
 
 // HasTime returns a boolean if a field has been set.
@@ -19852,6 +19867,11 @@ func (t *TimeseriesDefinition) HasTime() bool {
 // SetTime allocates a new t.Time and returns the pointer to it.
 func (t *TimeseriesDefinition) SetTime(v WidgetTime) {
 	t.Time = &v
+}
+
+// SetHeight allocates a new s.Height and returns the pointer to it.
+func (s *Screenboard) SetHeight(v StrIntD) {
+	s.Height = &v
 }
 
 // GetTitle returns the Title field if non-nil, zero value otherwise.
@@ -19986,6 +20006,14 @@ func (t *TimeseriesDefinition) GetYaxis() WidgetAxis {
 	return *t.Yaxis
 }
 
+// GetWidth returns the Width field if non-nil, zero value otherwise.
+func (s *Screenboard) GetWidth() StrIntD {
+	if s == nil || s.Width == nil {
+		return ""
+	}
+	return s.Width
+}
+
 // GetYaxisOk returns a tuple with the Yaxis field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
 func (t *TimeseriesDefinition) GetYaxisOk() (WidgetAxis, bool) {
@@ -19993,6 +20021,13 @@ func (t *TimeseriesDefinition) GetYaxisOk() (WidgetAxis, bool) {
 		return WidgetAxis{}, false
 	}
 	return *t.Yaxis, true
+}
+
+func (s *Screenboard) GetWidthOk() (StrIntD, bool) {
+	if s == nil || s.Width == nil {
+		return "", false
+	}
+	return s.Width, true
 }
 
 // HasYaxis returns a boolean if a field has been set.
@@ -20007,6 +20042,11 @@ func (t *TimeseriesDefinition) HasYaxis() bool {
 // SetYaxis allocates a new t.Yaxis and returns the pointer to it.
 func (t *TimeseriesDefinition) SetYaxis(v WidgetAxis) {
 	t.Yaxis = &v
+}
+
+// SetWidth allocates a new s.Width and returns the pointer to it.
+func (s *Screenboard) SetWidth(v StrIntD) {
+	s.Width = &v
 }
 
 // GetApmQuery returns the ApmQuery field if non-nil, zero value otherwise.
