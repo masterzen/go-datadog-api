@@ -11,8 +11,8 @@ func TestWidgets(t *testing.T) {
 	widgets := []datadog.Widget{
 		{
 			Type:      datadog.String("free_text"),
-			X:         datadog.Int(1),
-			Y:         datadog.Int(1),
+			X:         datadog.Float32(1),
+			Y:         datadog.Float32(1),
 			Width:     datadog.Int(5),
 			Height:    datadog.Int(5),
 			Text:      datadog.String("Test"),
@@ -23,8 +23,8 @@ func TestWidgets(t *testing.T) {
 		// Timeseries widget with metrics query.
 		{
 			Type:       datadog.String("timeseries"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -204,8 +204,8 @@ func TestWidgets(t *testing.T) {
 
 		{
 			Type:       datadog.String("query_value"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -244,8 +244,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:       datadog.String("toplist"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -277,8 +277,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:       datadog.String("change"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -303,8 +303,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:       datadog.String("event_timeline"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -317,8 +317,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:       datadog.String("event_stream"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -333,8 +333,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:       datadog.String("image"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -347,8 +347,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:      datadog.String("note"),
-			X:         datadog.Int(1),
-			Y:         datadog.Int(1),
+			X:         datadog.Float32(1),
+			Y:         datadog.Float32(1),
 			Width:     datadog.Int(5),
 			Height:    datadog.Int(5),
 			Bgcolor:   datadog.String("pink"),
@@ -361,8 +361,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:       datadog.String("alert_graph"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -377,8 +377,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:       datadog.String("alert_value"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -393,16 +393,16 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:   datadog.String("iframe"),
-			X:      datadog.Int(1),
-			Y:      datadog.Int(1),
+			X:      datadog.Float32(1),
+			Y:      datadog.Float32(1),
 			Width:  datadog.Int(5),
 			Height: datadog.Int(5),
 			URL:    datadog.String("https://www.datadoghq.com/"),
 		},
 		{
 			Type:       datadog.String("check_status"),
-			X:          datadog.Int(1),
-			Y:          datadog.Int(1),
+			X:          datadog.Float32(1),
+			Y:          datadog.Float32(1),
 			Width:      datadog.Int(5),
 			Height:     datadog.Int(5),
 			Title:      datadog.Bool(true),
@@ -419,8 +419,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:                 datadog.String("trace_service"),
-			X:                    datadog.Int(1),
-			Y:                    datadog.Int(1),
+			X:                    datadog.Float32(1),
+			Y:                    datadog.Float32(1),
 			Width:                datadog.Int(5),
 			Height:               datadog.Int(5),
 			Env:                  datadog.String("test"),
@@ -440,8 +440,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:   datadog.String("hostmap"),
-			X:      datadog.Int(1),
-			Y:      datadog.Int(1),
+			X:      datadog.Float32(1),
+			Y:      datadog.Float32(1),
 			Width:  datadog.Int(5),
 			Height: datadog.Int(5),
 			Query:  datadog.String("avg:system.load.1{*} by {host}"),
@@ -466,8 +466,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:                   datadog.String("manage_status"),
-			X:                      datadog.Int(1),
-			Y:                      datadog.Int(1),
+			X:                      datadog.Float32(1),
+			Y:                      datadog.Float32(1),
 			Width:                  datadog.Int(5),
 			Height:                 datadog.Int(5),
 			DisplayFormat:          datadog.String("countsAndList"),
@@ -486,8 +486,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:    datadog.String("log_stream"),
-			X:       datadog.Int(1),
-			Y:       datadog.Int(1),
+			X:       datadog.Float32(1),
+			Y:       datadog.Float32(1),
 			Width:   datadog.Int(5),
 			Height:  datadog.Int(5),
 			Query:   datadog.String("source:main"),
@@ -500,8 +500,8 @@ func TestWidgets(t *testing.T) {
 		{
 			// Widget is undocumented, subject to breaking API changes, and without customer support
 			Type:   datadog.String("uptime"),
-			X:      datadog.Int(1),
-			Y:      datadog.Int(1),
+			X:      datadog.Float32(1),
+			Y:      datadog.Float32(1),
 			Width:  datadog.Int(5),
 			Height: datadog.Int(5),
 			Timeframes: []*string{
@@ -527,8 +527,8 @@ func TestWidgets(t *testing.T) {
 		},
 		{
 			Type:   datadog.String("process"),
-			X:      datadog.Int(1),
-			Y:      datadog.Int(1),
+			X:      datadog.Float32(1),
+			Y:      datadog.Float32(1),
 			Width:  datadog.Int(5),
 			Height: datadog.Int(5),
 			Time:   &datadog.Time{},

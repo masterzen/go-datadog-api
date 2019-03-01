@@ -24323,6 +24323,14 @@ func (w *WidgetRequestStyle) GetPalette() string {
 	return *w.Palette
 }
 
+// GetX returns the X field if non-nil, zero value otherwise.
+func (w *Widget) GetX() float32 {
+	if w == nil || w.X == nil {
+		return 0
+	}
+	return *w.X
+}
+
 // GetPaletteOk returns a tuple with the Palette field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
 func (w *WidgetRequestStyle) GetPaletteOk() (string, bool) {
@@ -24330,6 +24338,13 @@ func (w *WidgetRequestStyle) GetPaletteOk() (string, bool) {
 		return "", false
 	}
 	return *w.Palette, true
+}
+
+func (w *Widget) GetXOk() (float32, bool) {
+	if w == nil || w.X == nil {
+		return 0, false
+	}
+	return *w.X, true
 }
 
 // HasPalette returns a boolean if a field has been set.
@@ -24354,6 +24369,19 @@ func (w *WidgetTime) GetLiveSpan() string {
 	return *w.LiveSpan
 }
 
+// SetX allocates a new w.X and returns the pointer to it.
+func (w *Widget) SetX(v float32) {
+	w.X = &v
+}
+
+// GetY returns the Y field if non-nil, zero value otherwise.
+func (w *Widget) GetY() float32 {
+	if w == nil || w.Y == nil {
+		return 0
+	}
+	return *w.Y
+}
+
 // GetLiveSpanOk returns a tuple with the LiveSpan field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
 func (w *WidgetTime) GetLiveSpanOk() (string, bool) {
@@ -24361,6 +24389,13 @@ func (w *WidgetTime) GetLiveSpanOk() (string, bool) {
 		return "", false
 	}
 	return *w.LiveSpan, true
+}
+
+func (w *Widget) GetYOk() (float32, bool) {
+	if w == nil || w.Y == nil {
+		return 0, false
+	}
+	return *w.Y, true
 }
 
 // HasLiveSpan returns a boolean if a field has been set.
@@ -24375,6 +24410,11 @@ func (w *WidgetTime) HasLiveSpan() bool {
 // SetLiveSpan allocates a new w.LiveSpan and returns the pointer to it.
 func (w *WidgetTime) SetLiveSpan(v string) {
 	w.LiveSpan = &v
+}
+
+// SetY allocates a new w.Y and returns the pointer to it.
+func (w *Widget) SetY(v float32) {
+	w.Y = &v
 }
 
 // GetIncludeUnits returns the IncludeUnits field if non-nil, zero value otherwise.
