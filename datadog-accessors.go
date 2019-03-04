@@ -8039,6 +8039,14 @@ func (g *GroupDefinition) GetType() string {
 	return *g.Type
 }
 
+// GetLabel returns the Label field if non-nil, zero value otherwise.
+func (t *TileDefMarker) GetLabel() StrBoolD {
+	if t == nil || t.Label == nil {
+		return ""
+	}
+	return *t.Label
+}
+
 // GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
 func (g *GroupDefinition) GetTypeOk() (string, bool) {
@@ -8046,6 +8054,13 @@ func (g *GroupDefinition) GetTypeOk() (string, bool) {
 		return "", false
 	}
 	return *g.Type, true
+}
+
+func (t *TileDefMarker) GetLabelOk() (StrBoolD, bool) {
+	if t == nil || t.Label == nil {
+		return "", false
+	}
+	return *t.Label, true
 }
 
 // HasType returns a boolean if a field has been set.
@@ -8060,6 +8075,10 @@ func (g *GroupDefinition) HasType() bool {
 // SetType allocates a new g.Type and returns the pointer to it.
 func (g *GroupDefinition) SetType(v string) {
 	g.Type = &v
+}
+// SetLabel allocates a new t.Label and returns the pointer to it.
+func (t *TileDefMarker) SetLabel(v StrBoolD) {
+	t.Label = &v
 }
 
 // GetTime returns the Time field if non-nil, zero value otherwise.
