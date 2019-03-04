@@ -19614,7 +19614,7 @@ func (t *TileDefStyle) SetPalette(v string) {
 }
 
 // GetPaletteFlip returns the PaletteFlip field if non-nil, zero value otherwise.
-func (t *TileDefStyle) GetPaletteFlip() string {
+func (t *TileDefStyle) GetPaletteFlip() StrBoolD {
 	if t == nil || t.PaletteFlip == nil {
 		return ""
 	}
@@ -19623,7 +19623,7 @@ func (t *TileDefStyle) GetPaletteFlip() string {
 
 // GetPaletteFlipOk returns a tuple with the PaletteFlip field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
-func (t *TileDefStyle) GetPaletteFlipOk() (string, bool) {
+func (t *TileDefStyle) GetPaletteFlipOk() (StrBoolD, bool) {
 	if t == nil || t.PaletteFlip == nil {
 		return "", false
 	}
@@ -19640,7 +19640,7 @@ func (t *TileDefStyle) HasPaletteFlip() bool {
 }
 
 // SetPaletteFlip allocates a new t.PaletteFlip and returns the pointer to it.
-func (t *TileDefStyle) SetPaletteFlip(v string) {
+func (t *TileDefStyle) SetPaletteFlip(v StrBoolD) {
 	t.PaletteFlip = &v
 }
 
