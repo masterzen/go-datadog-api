@@ -863,7 +863,7 @@ func (c *ConditionalFormat) GetValue() StrIntD {
 	if c == nil || c.Value == nil {
 		return ""
 	}
-	return c.Value
+	return *c.Value
 }
 
 // GetAggregationOk returns a tuple with the Aggregation field if it's non-nil, zero value otherwise
@@ -879,7 +879,7 @@ func (c *ConditionalFormat) GetValueOk() (StrIntD, bool) {
 	if c == nil || c.Value == nil {
 		return "", false
 	}
-	return c.Value, true
+	return *c.Value, true
 }
 
 // HasAggregation returns a boolean if a field has been set.
@@ -19874,7 +19874,7 @@ func (s *Screenboard) GetHeight() StrIntD {
 	if s == nil || s.Height == nil {
 		return ""
 	}
-	return s.Height
+	return *s.Height
 }
 
 // GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
@@ -19890,7 +19890,7 @@ func (s *Screenboard) GetHeightOk() (StrIntD, bool) {
 	if s == nil || s.Height == nil {
 		return "", false
 	}
-	return s.Height, true
+	return *s.Height, true
 }
 
 // HasTime returns a boolean if a field has been set.
@@ -20049,7 +20049,7 @@ func (s *Screenboard) GetWidth() StrIntD {
 	if s == nil || s.Width == nil {
 		return ""
 	}
-	return s.Width
+	return *s.Width
 }
 
 // GetYaxisOk returns a tuple with the Yaxis field if it's non-nil, zero value otherwise
@@ -20065,7 +20065,7 @@ func (s *Screenboard) GetWidthOk() (StrIntD, bool) {
 	if s == nil || s.Width == nil {
 		return "", false
 	}
-	return s.Width, true
+	return *s.Width, true
 }
 
 // HasYaxis returns a boolean if a field has been set.
@@ -22908,19 +22908,32 @@ func (w *Widget) SetTextSize(v string) {
 	w.TextSize = &v
 }
 
+<<<<<<< HEAD
 // GetTick returns the Tick field if non-nil, zero value otherwise.
 func (w *Widget) GetTick() bool {
 	if w == nil || w.Tick == nil {
 		return false
+=======
+// GetFontSize returns the FontSize field if non-nil, zero value otherwise.
+func (w *Widget) GetFontSize() StrIntD {
+	if w == nil || w.FontSize == nil {
+		return ""
+>>>>>>> Accept strings and integers as FontSize
 	}
 	return *w.Tick
 }
 
 // GetTickOk returns a tuple with the Tick field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (w *Widget) GetTickOk() (bool, bool) {
 	if w == nil || w.Tick == nil {
 		return false, false
+=======
+func (w *Widget) GetFontSizeOk() (StrIntD, bool) {
+	if w == nil || w.FontSize == nil {
+		return "", false
+>>>>>>> Accept strings and integers as FontSize
 	}
 	return *w.Tick, true
 }
@@ -22934,9 +22947,15 @@ func (w *Widget) HasTick() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTick allocates a new w.Tick and returns the pointer to it.
 func (w *Widget) SetTick(v bool) {
 	w.Tick = &v
+=======
+// SetFontSize allocates a new w.FontSize and returns the pointer to it.
+func (w *Widget) SetFontSize(v StrIntD) {
+	w.FontSize = &v
+>>>>>>> Accept strings and integers as FontSize
 }
 
 // GetTickEdge returns the TickEdge field if non-nil, zero value otherwise.
