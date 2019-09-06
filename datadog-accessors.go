@@ -3226,23 +3226,6 @@ func (c *ConditionalFormat) SetPalette(v string) {
 	c.Palette = &v
 }
 
-// GetValue returns the Value field if non-nil, zero value otherwise.
-func (c *ConditionalFormat) GetValue() string {
-	if c == nil || c.Value == nil {
-		return ""
-	}
-	return *c.Value
-}
-
-// GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
-// and a boolean to check if the value has been set.
-func (c *ConditionalFormat) GetValueOk() (string, bool) {
-	if c == nil || c.Value == nil {
-		return "", false
-	}
-	return *c.Value, true
-}
-
 // HasValue returns a boolean if a field has been set.
 func (c *ConditionalFormat) HasValue() bool {
 	if c != nil && c.Value != nil {
@@ -3250,11 +3233,6 @@ func (c *ConditionalFormat) HasValue() bool {
 	}
 
 	return false
-}
-
-// SetValue allocates a new c.Value and returns the pointer to it.
-func (c *ConditionalFormat) SetValue(v string) {
-	c.Value = &v
 }
 
 // GetAccessRole returns the AccessRole field if non-nil, zero value otherwise.
@@ -8076,6 +8054,7 @@ func (g *GroupDefinition) HasType() bool {
 func (g *GroupDefinition) SetType(v string) {
 	g.Type = &v
 }
+
 // SetLabel allocates a new t.Label and returns the pointer to it.
 func (t *TileDefMarker) SetLabel(v StrBoolD) {
 	t.Label = &v
@@ -14560,23 +14539,6 @@ func (s *ScatterplotRequests) SetY(v ScatterplotRequest) {
 	s.Y = &v
 }
 
-// GetHeight returns the Height field if non-nil, zero value otherwise.
-func (s *Screenboard) GetHeight() int {
-	if s == nil || s.Height == nil {
-		return 0
-	}
-	return *s.Height
-}
-
-// GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
-// and a boolean to check if the value has been set.
-func (s *Screenboard) GetHeightOk() (int, bool) {
-	if s == nil || s.Height == nil {
-		return 0, false
-	}
-	return *s.Height, true
-}
-
 // HasHeight returns a boolean if a field has been set.
 func (s *Screenboard) HasHeight() bool {
 	if s != nil && s.Height != nil {
@@ -14584,11 +14546,6 @@ func (s *Screenboard) HasHeight() bool {
 	}
 
 	return false
-}
-
-// SetHeight allocates a new s.Height and returns the pointer to it.
-func (s *Screenboard) SetHeight(v int) {
-	s.Height = &v
 }
 
 // GetId returns the Id field if non-nil, zero value otherwise.
@@ -14746,23 +14703,6 @@ func (s *Screenboard) SetTitle(v string) {
 	s.Title = &v
 }
 
-// GetWidth returns the Width field if non-nil, zero value otherwise.
-func (s *Screenboard) GetWidth() int {
-	if s == nil || s.Width == nil {
-		return 0
-	}
-	return *s.Width
-}
-
-// GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
-// and a boolean to check if the value has been set.
-func (s *Screenboard) GetWidthOk() (int, bool) {
-	if s == nil || s.Width == nil {
-		return 0, false
-	}
-	return *s.Width, true
-}
-
 // HasWidth returns a boolean if a field has been set.
 func (s *Screenboard) HasWidth() bool {
 	if s != nil && s.Width != nil {
@@ -14770,11 +14710,6 @@ func (s *Screenboard) HasWidth() bool {
 	}
 
 	return false
-}
-
-// SetWidth allocates a new s.Width and returns the pointer to it.
-func (s *Screenboard) SetWidth(v int) {
-	s.Width = &v
 }
 
 // GetId returns the Id field if non-nil, zero value otherwise.
@@ -18683,23 +18618,6 @@ func (t *TileDefEvent) SetQuery(v string) {
 	t.Query = &v
 }
 
-// GetLabel returns the Label field if non-nil, zero value otherwise.
-func (t *TileDefMarker) GetLabel() string {
-	if t == nil || t.Label == nil {
-		return ""
-	}
-	return *t.Label
-}
-
-// GetLabelOk returns a tuple with the Label field if it's non-nil, zero value otherwise
-// and a boolean to check if the value has been set.
-func (t *TileDefMarker) GetLabelOk() (string, bool) {
-	if t == nil || t.Label == nil {
-		return "", false
-	}
-	return *t.Label, true
-}
-
 // HasLabel returns a boolean if a field has been set.
 func (t *TileDefMarker) HasLabel() bool {
 	if t != nil && t.Label != nil {
@@ -18707,11 +18625,6 @@ func (t *TileDefMarker) HasLabel() bool {
 	}
 
 	return false
-}
-
-// SetLabel allocates a new t.Label and returns the pointer to it.
-func (t *TileDefMarker) SetLabel(v string) {
-	t.Label = &v
 }
 
 // GetType returns the Type field if non-nil, zero value otherwise.
@@ -21916,23 +21829,6 @@ func (w *Widget) SetEventSize(v string) {
 	w.EventSize = &v
 }
 
-// GetFontSize returns the FontSize field if non-nil, zero value otherwise.
-func (w *Widget) GetFontSize() string {
-	if w == nil || w.FontSize == nil {
-		return ""
-	}
-	return *w.FontSize
-}
-
-// GetFontSizeOk returns a tuple with the FontSize field if it's non-nil, zero value otherwise
-// and a boolean to check if the value has been set.
-func (w *Widget) GetFontSizeOk() (string, bool) {
-	if w == nil || w.FontSize == nil {
-		return "", false
-	}
-	return *w.FontSize, true
-}
-
 // HasFontSize returns a boolean if a field has been set.
 func (w *Widget) HasFontSize() bool {
 	if w != nil && w.FontSize != nil {
@@ -21940,11 +21836,6 @@ func (w *Widget) HasFontSize() bool {
 	}
 
 	return false
-}
-
-// SetFontSize allocates a new w.FontSize and returns the pointer to it.
-func (w *Widget) SetFontSize(v string) {
-	w.FontSize = &v
 }
 
 // GetGroup returns the Group field if non-nil, zero value otherwise.
@@ -22908,34 +22799,36 @@ func (w *Widget) SetTextSize(v string) {
 	w.TextSize = &v
 }
 
-<<<<<<< HEAD
 // GetTick returns the Tick field if non-nil, zero value otherwise.
 func (w *Widget) GetTick() bool {
 	if w == nil || w.Tick == nil {
 		return false
-=======
-// GetFontSize returns the FontSize field if non-nil, zero value otherwise.
-func (w *Widget) GetFontSize() StrIntD {
-	if w == nil || w.FontSize == nil {
-		return ""
->>>>>>> Accept strings and integers as FontSize
 	}
 	return *w.Tick
 }
 
+// GetFontSize returns the FontSize field if non-nil, zero value otherwise.
+func (w *Widget) GetFontSize() StrIntD {
+	if w == nil || w.FontSize == nil {
+		return ""
+	}
+	return *w.FontSize
+}
+
 // GetTickOk returns a tuple with the Tick field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
-<<<<<<< HEAD
 func (w *Widget) GetTickOk() (bool, bool) {
 	if w == nil || w.Tick == nil {
 		return false, false
-=======
+	}
+	return *w.Tick, true
+}
+
 func (w *Widget) GetFontSizeOk() (StrIntD, bool) {
 	if w == nil || w.FontSize == nil {
 		return "", false
->>>>>>> Accept strings and integers as FontSize
 	}
-	return *w.Tick, true
+	return *w.FontSize, true
 }
 
 // HasTick returns a boolean if a field has been set.
@@ -22947,15 +22840,14 @@ func (w *Widget) HasTick() bool {
 	return false
 }
 
-<<<<<<< HEAD
 // SetTick allocates a new w.Tick and returns the pointer to it.
 func (w *Widget) SetTick(v bool) {
 	w.Tick = &v
-=======
+}
+
 // SetFontSize allocates a new w.FontSize and returns the pointer to it.
 func (w *Widget) SetFontSize(v StrIntD) {
 	w.FontSize = &v
->>>>>>> Accept strings and integers as FontSize
 }
 
 // GetTickEdge returns the TickEdge field if non-nil, zero value otherwise.
@@ -23362,7 +23254,7 @@ func (w *Widget) SetWidth(v int) {
 }
 
 // GetX returns the X field if non-nil, zero value otherwise.
-func (w *Widget) GetX() int {
+func (w *Widget) GetX() float32 {
 	if w == nil || w.X == nil {
 		return 0
 	}
@@ -23371,7 +23263,7 @@ func (w *Widget) GetX() int {
 
 // GetXOk returns a tuple with the X field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
-func (w *Widget) GetXOk() (int, bool) {
+func (w *Widget) GetXOk() (float32, bool) {
 	if w == nil || w.X == nil {
 		return 0, false
 	}
@@ -23388,12 +23280,12 @@ func (w *Widget) HasX() bool {
 }
 
 // SetX allocates a new w.X and returns the pointer to it.
-func (w *Widget) SetX(v int) {
+func (w *Widget) SetX(v float32) {
 	w.X = &v
 }
 
 // GetY returns the Y field if non-nil, zero value otherwise.
-func (w *Widget) GetY() int {
+func (w *Widget) GetY() float32 {
 	if w == nil || w.Y == nil {
 		return 0
 	}
@@ -23402,7 +23294,7 @@ func (w *Widget) GetY() int {
 
 // GetYOk returns a tuple with the Y field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
-func (w *Widget) GetYOk() (int, bool) {
+func (w *Widget) GetYOk() (float32, bool) {
 	if w == nil || w.Y == nil {
 		return 0, false
 	}
@@ -23419,7 +23311,7 @@ func (w *Widget) HasY() bool {
 }
 
 // SetY allocates a new w.Y and returns the pointer to it.
-func (w *Widget) SetY(v int) {
+func (w *Widget) SetY(v float32) {
 	w.Y = &v
 }
 
@@ -24361,14 +24253,6 @@ func (w *WidgetRequestStyle) GetPalette() string {
 	return *w.Palette
 }
 
-// GetX returns the X field if non-nil, zero value otherwise.
-func (w *Widget) GetX() float32 {
-	if w == nil || w.X == nil {
-		return 0
-	}
-	return *w.X
-}
-
 // GetPaletteOk returns a tuple with the Palette field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
 func (w *WidgetRequestStyle) GetPaletteOk() (string, bool) {
@@ -24376,13 +24260,6 @@ func (w *WidgetRequestStyle) GetPaletteOk() (string, bool) {
 		return "", false
 	}
 	return *w.Palette, true
-}
-
-func (w *Widget) GetXOk() (float32, bool) {
-	if w == nil || w.X == nil {
-		return 0, false
-	}
-	return *w.X, true
 }
 
 // HasPalette returns a boolean if a field has been set.
@@ -24407,19 +24284,6 @@ func (w *WidgetTime) GetLiveSpan() string {
 	return *w.LiveSpan
 }
 
-// SetX allocates a new w.X and returns the pointer to it.
-func (w *Widget) SetX(v float32) {
-	w.X = &v
-}
-
-// GetY returns the Y field if non-nil, zero value otherwise.
-func (w *Widget) GetY() float32 {
-	if w == nil || w.Y == nil {
-		return 0
-	}
-	return *w.Y
-}
-
 // GetLiveSpanOk returns a tuple with the LiveSpan field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
 func (w *WidgetTime) GetLiveSpanOk() (string, bool) {
@@ -24427,13 +24291,6 @@ func (w *WidgetTime) GetLiveSpanOk() (string, bool) {
 		return "", false
 	}
 	return *w.LiveSpan, true
-}
-
-func (w *Widget) GetYOk() (float32, bool) {
-	if w == nil || w.Y == nil {
-		return 0, false
-	}
-	return *w.Y, true
 }
 
 // HasLiveSpan returns a boolean if a field has been set.
@@ -24448,11 +24305,6 @@ func (w *WidgetTime) HasLiveSpan() bool {
 // SetLiveSpan allocates a new w.LiveSpan and returns the pointer to it.
 func (w *WidgetTime) SetLiveSpan(v string) {
 	w.LiveSpan = &v
-}
-
-// SetY allocates a new w.Y and returns the pointer to it.
-func (w *Widget) SetY(v float32) {
-	w.Y = &v
 }
 
 // GetIncludeUnits returns the IncludeUnits field if non-nil, zero value otherwise.
